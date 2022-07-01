@@ -13,7 +13,7 @@ const Header = () => {
             <div className='flex flex-col lg:flex-row items-center justify-between py-4'>
                 <div>
                     <img src="" alt="" />
-                    <h1 className='font-bold text-4xl text-green-600'>My Task</h1>
+                    <h1 className='font-bold text-4xl text-green-600'>My <span className='text-blue-600'>Task</span></h1>
                 </div>
                 <div className='mt-2 lg:mt-0'>
                     <NavLink className='nav-link' to='/'>To-Do</NavLink>
@@ -21,7 +21,7 @@ const Header = () => {
                     <NavLink className='nav-link' to='/Calender'>Calender</NavLink>
                     <div className='lg:inline text-end'>
                         {
-                            user ? <button onClick={() => signOut(auth)} className='text-3xl text-red-600 font-bold border-green-600 border mt-2 lg:mt-0 p-2 rounded-md'>Logout <FiLogOut className='inline text-2xl' /></button>
+                            user ? <button onClick={() => signOut(auth)} className='text-2xl text-red-700 font-medium border-green-600 border mt-2 lg:mt-0 p-2 rounded-md'>Logout <FiLogOut className='inline text-2xl' /></button>
                                 :
                                 <NavLink className='nav-link' to='/login'>Login</NavLink>
                         }

@@ -39,7 +39,7 @@ const CompleteTask = ({ task, refetch, setReFetch, handelDelete }) => {
             <div className='py-3 shadow-lg shadow-green-100 rounded-lg mb-6 p-2 lg:px-6'>
                 <div className='flex justify-between'>
                     <div>
-                        <div className='flex'>
+                        <div className='flex items-center'>
                             <p onClick={handelUnCheck} className='mr-3'><FaCheckSquare className='text-green-600 hover:text-green-400 cursor-pointer inline text-2xl' /></p>
                             <div>
                                 <h1 className='text-2xl text-gray-500 line-through'>{title}</h1>
