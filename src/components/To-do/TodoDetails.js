@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 
 const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
     const [user] = useAuthState(auth);
-    const { taskDetails, title, _id } = task
+    const { taskDetails, title, date, _id } = task
     const [edit, setEdit] = useState(false);
 
     const handelCheck = event => {
@@ -82,9 +82,12 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
                             <div className='mr-3'>
                                 <input onClick={handelCheck} type="checkbox" name='done' className=" w-5 h-5" />
                             </div>
-                            <h1 className='text-3xl'>{title}</h1>
+                            <div>
+                                <h1 className='text-3xl'>{title}</h1>
+                                <span className='text-red-500'>{date}</span>
+                            </div>
                         </div>
-                        <p className='text-gray-700 mt-2'>{taskDetails}</p>
+                        <p className='text-gray-900 mt-2'>{taskDetails}</p>
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>

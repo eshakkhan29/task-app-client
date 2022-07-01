@@ -14,9 +14,3 @@
 .nav-link:hover {
     color: #16A34A;
 }
-
-.react-calendar {
-    width: 600px !important;
-    border: 1px solid #16A34A !important;
-    border-radius: 10px;
-}

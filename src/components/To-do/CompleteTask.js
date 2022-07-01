@@ -3,15 +3,18 @@ import { FaCheckCircle } from 'react-icons/fa';
 import { TiDeleteOutline } from 'react-icons/ti';
 
 const CompleteTask = ({ task, handelDelete }) => {
-    const { taskDetails, title, _id } = task
+    const { taskDetails, title, date, _id } = task
     return (
         <div>
             <div className='py-3 shadow-md mb-5 p-2 lg:px-6'>
                 <div className='flex justify-between'>
                     <div>
-                        <div className='flex items-center'>
-                            <h1 className='text-3xl text-gray-500 line-through'>{title}</h1>
-                            <p className='ml-2'><FaCheckCircle className='text-green-600 inline text-2xl lg:ml-3' /></p>
+                        <div className='flex'>
+                            <div>
+                                <h1 className='text-3xl text-gray-500 line-through'>{title}</h1>
+                                <span className='text-gray-500'>{date}</span>
+                            </div>
+                            <p className='ml-3'><FaCheckCircle className='text-green-600 inline text-2xl lg:ml-3' /></p>
                         </div>
                         <p className='text-gray-500 mt-2'>{taskDetails}</p>
                     </div>
