@@ -19,7 +19,7 @@ const Calendars = () => {
                         }} />
                 </div>
                 <div className='py-5'>
-                    <h1 className='text-2xl text-center'>Today: {newDate}</h1>
+                    <h1 className='text-2xl text-center my-10'>Today: {newDate}</h1>
                 </div>
             </div>
         </div>
