@@ -41,7 +41,7 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
 
         }
     }
-    const handelEdit = (event) => {
+    const handelUpdate = (event) => {
         event.preventDefault()
         const email = user.email;
         const title = event.target.title.value;
@@ -57,7 +57,6 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged === true) {
-                    setReFetch(!refetch)
                     setEdit(!edit)
                     toast.success("Your Task is Updated", {
                         position: "top-center",
@@ -68,6 +67,7 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
                         draggable: true,
                         progress: undefined,
                     });
+                    setReFetch(!refetch)
                 }
             })
         event.target.reset();
@@ -94,12 +94,12 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
             </div>
             {edit &&
                 <div>
-                    <form onSubmit={handelEdit}>
+                    <form onSubmit={handelUpdate}>
                         <label className="relative block">
-                            <input className="placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-500 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task title" type="text" name="title" />
+                            <input className="placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-500 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task title" type="text" name="title" defaultValue={title} />
                         </label>
                         <label className="relative block">
-                            <textarea className="mt-4 placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-500 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task description" type="text" name="task" />
+                            <textarea className="mt-4 placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-500 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task description" type="text" name="task" defaultValue={taskDetails} />
                         </label>
                         <input className='btn btn-primary mt-2' type="submit" value="Save" />
                     </form>
