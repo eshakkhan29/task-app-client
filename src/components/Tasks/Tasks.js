@@ -59,17 +59,20 @@ const Tasks = () => {
         <form>
             <input
                 {...inputProps}
-                name="date" className="text-2xl text-center placeholder:text-black bg-white w-full border border-blue-400 rounded-md py-3 px-4 shadow-sm focus:outline-none focus:border-green-600 focus:ring-green-600 focus:ring-1"
+                name="date" className="text-2xl text-center placeholder:text-black bg-white w-full border border-blue-400 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:border-green-600 focus:ring-green-600 focus:ring-1"
             />
         </form>
     );
 
     return (
-        <div className='lg:p-10 flex items-center flex-col lg:flex-row  py-20'>
+        <div className='lg:p-10 flex items-center flex-col lg:flex-row lg:py-20 pb-20'>
             <div className='lg:w-1/2 flex items-center justify-center'>
                 <div>
                     <DayPicker {...dayPickerProps}
-                        footer={footer} />
+                        footer={footer}
+                        styles={{
+                            caption: { color: '#3B82F6' }
+                        }} />
                 </div>
             </div>
             <div className='lg:w-1/2'>
