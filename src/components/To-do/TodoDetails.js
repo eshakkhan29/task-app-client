@@ -88,7 +88,7 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <button onClick={() => setEdit(!edit)} className='mb-2 text-2xl text-green-600 hover:text-green-400'> <RiEdit2Line /> </button>
+                    <button onClick={() => setEdit(!edit)} className='mb-5 text-2xl text-green-600 hover:text-green-400'> <RiEdit2Line /> </button>
                     <button onClick={() => handelDelete(_id)} className='text-2xl text-red-700 hover:text-red-400'><BsTrashFill /></button>
                 </div>
             </div>

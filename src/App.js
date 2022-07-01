@@ -12,25 +12,27 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
-    <div className='lg:w-8/12 mx-auto'>
-      <Header></Header>
-      <Routes>
-        <Route path='/' element={
-          <RequireAuth>
-            <Todo></Todo>
-          </RequireAuth>
-        }></Route>
-        <Route path='/task' element={
-          <RequireAuth>
-            <Tasks></Tasks>
-          </RequireAuth>
-        }></Route>
-        <Route path='/calender' element={<Calendars></Calendars>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
-      </Routes>
+    <>
+      <div className='lg:w-8/12 mx-auto'>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element={
+            <RequireAuth>
+              <Todo></Todo>
+            </RequireAuth>
+          }></Route>
+          <Route path='/task' element={
+            <RequireAuth>
+              <Tasks></Tasks>
+            </RequireAuth>
+          }></Route>
+          <Route path='/calender' element={<Calendars></Calendars>}></Route>
+          <Route path='/login' element={<Login></Login>}></Route>
+        </Routes>
+        <ToastContainer />
+      </div>
       <Footer></Footer>
-      <ToastContainer />
-    </div>
+    </>
   );
 }
 
