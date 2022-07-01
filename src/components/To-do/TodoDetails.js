@@ -14,8 +14,8 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
         if (event.target.checked === true) {
             const taskStatus = "true";
             const exitingTask = { ...task }
-            const { title, taskDetails, email } = exitingTask;
-            const data = { title, taskDetails, email, taskStatus }
+            const { title, taskDetails, date, email } = exitingTask;
+            const data = { title, taskDetails, email, date, taskStatus }
             fetch(`https://glacial-earth-77178.herokuapp.com/task/${_id}`, {
                 method: 'PUT',
                 headers: {
@@ -46,7 +46,8 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
         const email = user.email;
         const title = event.target.title.value;
         const taskDetails = event.target.task.value;
-        const data = { title, taskDetails, email }
+        const date = event.target.date.value;
+        const data = { title, taskDetails, date, email }
         fetch(`https://glacial-earth-77178.herokuapp.com/task/${_id}`, {
             method: 'PUT',
             headers: {
@@ -84,10 +85,10 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
                             </div>
                             <div>
                                 <h1 className='text-3xl'>{title}</h1>
-                                <span className='text-red-500'>{date}</span>
+                                <span className='text-red-700 font-semibold   '>{date}</span>
                             </div>
                         </div>
-                        <p className='text-gray-900 mt-2'>{taskDetails}</p>
+                        <p className='text-black-600 mt-2'>{taskDetails}</p>
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
@@ -103,6 +104,9 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
                         </label>
                         <label className="relative block">
                             <textarea className="mt-4 placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-500 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task description" type="text" name="task" defaultValue={taskDetails} />
+                        </label>
+                        <label className="relative block">
+                            <input className="mt-4 placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-500 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task description" type="text" name="date" defaultValue={date} />
                         </label>
                         <input className='btn btn-primary mt-2' type="submit" value="Save" />
                     </form>

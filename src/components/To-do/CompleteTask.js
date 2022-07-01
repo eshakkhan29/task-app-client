@@ -12,7 +12,7 @@ const CompleteTask = ({ task, handelDelete }) => {
                         <div className='flex'>
                             <div>
                                 <h1 className='text-3xl text-gray-500 line-through'>{title}</h1>
-                                <span className='text-gray-500'>{date}</span>
+                                <span className='text-gray-500 font-semibold'>{date}</span>
                             </div>
                             <p className='ml-3'><FaCheckCircle className='text-green-600 inline text-2xl lg:ml-3' /></p>
                         </div>

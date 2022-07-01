@@ -40,8 +40,8 @@ const Todo = () => {
             })
     }
 
-    if (tasks.length === 0) {
-        return <Loading></Loading>
+    if (tasks.length <= 0) {
+        return <Loading></Loading>;
     }
 
     return (
