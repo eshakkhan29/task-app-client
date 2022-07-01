@@ -12,7 +12,9 @@ const Calendars = () => {
                 <div className='mx-auto text-center react-calendar flex items-center justify-center'>
                     <Calendar onChange={onChange} value={value} />
                 </div>
-                <h1>date: {date}</h1>
+                <div className='py-5'>
+                    <h1 className='text-2xl text-center'>date: {date}</h1>
+                </div>
             </div>
         </div>
     );

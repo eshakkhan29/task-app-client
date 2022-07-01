@@ -9,6 +9,8 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
     const [user] = useAuthState(auth);
     const { taskDetails, title, _id } = task
     const [edit, setEdit] = useState(false);
+    const [editedTitle, setEditedTitle] = useState(title);
+    const [editedDes, setEditedDes] = useState(taskDetails);
 
     const handelCheck = event => {
         if (event.target.checked === true) {

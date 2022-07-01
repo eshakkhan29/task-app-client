@@ -3,13 +3,15 @@ import './Login.css';
 import { ImGooglePlus3 } from 'react-icons/im';
 import auth from '../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate();
     const [signInWithGoogle, user] = useSignInWithGoogle(auth);
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true });
     }
     return (
         <div className='h-96 flex items-center justify-center'>
