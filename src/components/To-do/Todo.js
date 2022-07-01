@@ -20,7 +20,7 @@ const Todo = () => {
     const unCompleteTask = tasks.filter(task => task.taskStatus === "false");
 
     const handelDelete = (id) => {
-        fetch(`https://glacial-earth-77178.herokuapp.com/${id}`, {
+        fetch(`https://glacial-earth-77178.herokuapp.com/task/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

@@ -9,8 +9,6 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
     const [user] = useAuthState(auth);
     const { taskDetails, title, _id } = task
     const [edit, setEdit] = useState(false);
-    const [editedTitle, setEditedTitle] = useState(title);
-    const [editedDes, setEditedDes] = useState(taskDetails);
 
     const handelCheck = event => {
         if (event.target.checked === true) {
@@ -43,13 +41,13 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
 
         }
     }
-    const handelEdit = async (event) => {
+    const handelEdit = (event) => {
         event.preventDefault()
         const email = user.email;
         const title = event.target.title.value;
         const taskDetails = event.target.task.value;
         const data = { title, taskDetails, email }
-        fetch(`http://localhost:5000/task/${_id}`, {
+        fetch(`https://glacial-earth-77178.herokuapp.com/task/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
