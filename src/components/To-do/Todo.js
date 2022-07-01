@@ -12,7 +12,7 @@ const Todo = () => {
     const [refetch, setReFetch] = useState(false);
     const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/task?email=${email}`)
+        fetch(`https://glacial-earth-77178.herokuapp.com/task?email=${email}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [refetch, email])
@@ -20,7 +20,7 @@ const Todo = () => {
     const unCompleteTask = tasks.filter(task => task.taskStatus === "false");
 
     const handelDelete = (id) => {
-        fetch(`http://localhost:5000/task/${id}`, {
+        fetch(`https://glacial-earth-77178.herokuapp.com/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

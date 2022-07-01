@@ -16,7 +16,7 @@ const Tasks = () => {
         const email = user.email;
         const data = { title, taskDetails, email, taskStatus }
 
-        fetch("http://localhost:5000/task", {
+        fetch("https://glacial-earth-77178.herokuapp.com/task", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

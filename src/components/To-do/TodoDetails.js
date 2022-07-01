@@ -16,7 +16,7 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
             const exitingTask = { ...task }
             const { title, taskDetails, email } = exitingTask;
             const data = { title, taskDetails, email, taskStatus }
-            fetch(`http://localhost:5000/task/${_id}`, {
+            fetch(`https://glacial-earth-77178.herokuapp.com/task/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
