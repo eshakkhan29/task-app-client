@@ -1,19 +1,22 @@
 import React from 'react';
-import { BsCheck2All, BsTrashFill } from 'react-icons/bs';
+import { FaCheckCircle } from 'react-icons/fa';
+import { TiDeleteOutline } from 'react-icons/ti';
 
 const CompleteTask = ({ task, handelDelete }) => {
     const { taskDetails, title, _id } = task
     return (
         <div>
             <div className='py-3 shadow-md mb-5 p-2 lg:px-6'>
-                <div className='flex items-center justify-between'>
+                <div className='flex justify-between'>
                     <div>
-                        <h1 className='text-3xl text-gray-500'>{title}</h1>
+                        <div className='flex items-center'>
+                            <h1 className='text-3xl text-gray-500 line-through'>{title}</h1>
+                            <p><FaCheckCircle className='text-green-600 inline text-2xl lg:ml-3' /></p>
+                        </div>
                         <p className='text-gray-500 mt-2'>{taskDetails}</p>
                     </div>
                     <div>
-                        <button onClick={() => handelDelete(_id)} className='text-2xl text-red-700 hover:text-red-400'><BsTrashFill /></button>
-                        <p className='text-1xl text-gray-600'><BsCheck2All className='text-green-500 inline text-3xl lg:ml-3' /></p>
+                        <button onClick={() => handelDelete(_id)} className='text-2xl text-red-700 hover:text-red-400'><TiDeleteOutline /></button>
                     </div>
                 </div>
             </div>
