@@ -83,7 +83,7 @@ const Tasks = () => {
                     </label>
                     <input className='btn btn-primary mt-3' type="submit" value="Add" />
                 </form>
-                <h2 className='text-1xl text-center'>Hit enter button to added task</h2>
+                <h2 className='text-1xl text-center py-3'>Hit enter button to added task</h2>
             </div>
         </div>
     );

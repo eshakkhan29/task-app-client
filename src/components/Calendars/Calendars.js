@@ -10,7 +10,7 @@ const Calendars = () => {
         <div className='py-10 p-5'>
             <div>
                 <div className=' py-5 flex items-center justify-center'>
-                    <DayPicker className='shadow-md shadow-blue-200 p-5 rounded-lg'
+                    <DayPicker className='shadow-md shadow-blue-200 rounded-lg p-5'
                         mode="single"
                         selected={date}
                         onSelect={setDate}

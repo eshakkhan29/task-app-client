@@ -51,15 +51,15 @@ const Todo = () => {
                     <h1 className='text-2xl text-blue-500 font-semibold'>incomplete Task</h1>
                     <div>
                         {
-                            unCompleteTask?.map(task => <TodoDetails fetch={fetch} setReFetch={setReFetch} key={task._id} task={task} handelDelete={handelDelete}></TodoDetails>)
+                            unCompleteTask?.map(task => <TodoDetails refetch={refetch} setReFetch={setReFetch} key={task._id} task={task} handelDelete={handelDelete}></TodoDetails>)
                         }
                     </div>
                 </div>
                 <div className='lg:w-1/2 p-5'>
                     <h1 className='text-2xl text-green-600 font-semibold'>complete Task</h1>
-                    <div>
+                    <div className='py-5'>
                         {
-                            completeTask.map(cTask => <CompleteTask key={cTask._id} task={cTask} handelDelete={handelDelete}></CompleteTask>)
+                            completeTask.map(cTask => <CompleteTask refetch={refetch} setReFetch={setReFetch} key={cTask._id} task={cTask} handelDelete={handelDelete}></CompleteTask>)
                         }
                     </div>
                 </div>

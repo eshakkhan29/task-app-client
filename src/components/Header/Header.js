@@ -13,7 +13,7 @@ const Header = () => {
             <div className='flex flex-col lg:flex-row items-center justify-between py-4'>
                 <div>
                     <img src="" alt="" />
-                    <h1 className='font-sans font-bold text-4xl text-green-600'>Task</h1>
+                    <h1 className='font-bold text-4xl text-green-600'>My Task</h1>
                 </div>
                 <div className='mt-2 lg:mt-0'>
                     <NavLink className='nav-link' to='/'>To-Do</NavLink>

@@ -76,7 +76,7 @@ const TodoDetails = ({ task, refetch, setReFetch, handelDelete }) => {
 
     return (
         <>
-            <div className='flex items-center justify-between py-3 shadow-md mb-5 px-4'>
+            <div className='flex items-center justify-between py-3 mb-5 px-4 shadow-md shadow-blue-200 rounded-lg'>
                 <div>
                     <div>
                         <div className='flex items-center'>
