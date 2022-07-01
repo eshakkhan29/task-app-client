@@ -48,7 +48,7 @@ const Todo = () => {
         <section className='py-10'>
             <div className='flex flex-col lg:flex-row'>
                 <div className='lg:w-1/2 p-5'>
-                    <h1 className='text-2xl text-green-600 font-semibold'>incomplete Task</h1>
+                    <h1 className='text-2xl text-blue-500 font-semibold'>incomplete Task</h1>
                     <div>
                         {
                             unCompleteTask?.map(task => <TodoDetails fetch={fetch} setReFetch={setReFetch} key={task._id} task={task} handelDelete={handelDelete}></TodoDetails>)

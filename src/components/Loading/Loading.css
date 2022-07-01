@@ -12,12 +12,12 @@
 }
 
 .green {
-    background-color: rgb(50, 205, 50, 0.7);
+    background-color: #16A34A;
     animation: move-right 2s linear infinite
 }
 
 .orange {
-    background-color: rgb(255, 165, 0, 0.9);
+    background-color: #3B82F6;
     animation: move-left 2s linear infinite
 }
 

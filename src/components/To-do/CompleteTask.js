@@ -11,7 +11,7 @@ const CompleteTask = ({ task, handelDelete }) => {
                     <div>
                         <div className='flex items-center'>
                             <h1 className='text-3xl text-gray-500 line-through'>{title}</h1>
-                            <p><FaCheckCircle className='text-green-600 inline text-2xl lg:ml-3' /></p>
+                            <p className='ml-2'><FaCheckCircle className='text-green-600 inline text-2xl lg:ml-3' /></p>
                         </div>
                         <p className='text-gray-500 mt-2'>{taskDetails}</p>
                     </div>

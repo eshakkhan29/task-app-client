@@ -4,7 +4,6 @@ import 'react-calendar/dist/Calendar.css';
 
 const Calendars = () => {
     const [value, onChange] = useState(new Date());
-    console.log(value);
     const date = value.toString();
     return (
         <div className='calender-section py-10 p-5'>

@@ -47,12 +47,13 @@ const Tasks = () => {
     return (
         <div className='lg:p-10  p-5'>
             <div className='lg:w-3/5 mx-auto py-10'>
+                <h1 className='text-3xl text-green-600 py-4 uppercase font-semibold'>Add Task</h1>
                 <form onSubmit={handelTaskAdd}>
                     <label className="relative block">
-                        <input className="placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-400 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task title" type="text" name="title" required />
+                        <input className="placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-400 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-600 focus:ring-green-600 focus:ring-1 sm:text-sm" placeholder="Type your task title" type="text" name="title" required />
                     </label>
                     <label className="relative block">
-                        <input className="mt-4 placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-400 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Type your task description" type="text" name="task" required />
+                        <input className="mt-4 placeholder:italic placeholder:text-slate-500 block bg-white w-full border border-blue-400 rounded-md py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-600 focus:ring-green-600 focus:ring-1 sm:text-sm" placeholder="Type your task description" type="text" name="task" required />
                     </label>
                     <input className='btn btn-primary mt-3' type="submit" value="Add" />
                 </form>
