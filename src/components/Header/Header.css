@@ -1,0 +1,20 @@
+.nav-link{
+    text-decoration: none;
+    color: #000000;
+    font-size: 22px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+.active{
+    color: rgba(0, 163, 49, 0.85);
+}
+.nav-link:hover{
+    color: rgba(0, 163, 49, 0.85);
+}
+
+.react-calendar{
+    width: 600px !important;
+    border: 1px solid rgb(0, 179, 0) !important;
+    border-radius: 10px;
+}
