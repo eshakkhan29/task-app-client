@@ -24,7 +24,6 @@ const Tasks = () => {
         const email = user.email;
         const date = inputProps.value;
         const data = { title, taskDetails, email, taskStatus, date }
-        console.log(data);
         fetch("https://glacial-earth-77178.herokuapp.com/task", {
             method: 'POST',
             headers: {
