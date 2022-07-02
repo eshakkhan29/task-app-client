@@ -57,7 +57,7 @@ const Todo = () => {
                 </div>
                 <div className='lg:w-1/2 p-5'>
                     <h1 className='text-2xl text-green-600 font-semibold'>complete Task</h1>
-                    <div className='py-5'>
+                    <div className='pb-5'>
                         {
                             completeTask.map(cTask => <CompleteTask refetch={refetch} setReFetch={setReFetch} key={cTask._id} task={cTask} handelDelete={handelDelete}></CompleteTask>)
                         }

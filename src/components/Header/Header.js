@@ -14,9 +14,9 @@ const Header = () => {
                 <div className='flex items-center'>
                     <h1 className='font-bold text-4xl text-green-600'>My <span className='text-blue-600'>Task</span></h1>
                     {user &&
-                        <div className='flex items-center ml-20 lg:hidden'>
+                        <div className='flex items-center ml-16 lg:hidden'>
                             <img className='w-10 h-10 rounded-full mr-3' src={user?.photoURL} alt="profile" />
-                            <button onClick={() => signOut(auth)} className='lg:text-2xl text-red-700 font-medium border-red-600 hover:bg-green-600 hover:text-white hover:border-white border lg:mt-0 p-2 rounded-md'>Logout <FiLogOut className='inline text-2xl' /></button>
+                            <button onClick={() => signOut(auth)} className='lg:text-2xl text-red-700 font-medium border-red-600 hover:bg-red-600 hover:text-white hover:border-white border lg:mt-0 p-2 rounded-md'>Logout <FiLogOut className='inline text-2xl' /></button>
                         </div>
                     }
                 </div>
@@ -35,7 +35,7 @@ const Header = () => {
                             <div className='lg:block hidden'>
                                 <div className='flex items-center'>
                                     <img className='w-10 h-10 rounded-full mr-3' src={user?.photoURL} alt="profile" />
-                                    <button onClick={() => signOut(auth)} className='lg:text-2xl text-red-700 font-medium border-red-600 hover:bg-green-600 hover:text-white hover:border-white border lg:mt-0 p-2 rounded-md'>Logout <FiLogOut className='inline text-2xl' /></button>
+                                    <button onClick={() => signOut(auth)} className='lg:text-2xl text-red-700 font-medium border-red-600 hover:bg-red-600 hover:text-white hover:border-white border lg:mt-0 p-2 rounded-md'>Logout <FiLogOut className='inline text-2xl' /></button>
                                 </div>
                             </div>
                         }
