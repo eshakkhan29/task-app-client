@@ -59,7 +59,7 @@ const Tasks = () => {
         <form>
             <input
                 {...inputProps}
-                name="date" className="text-2xl text-center placeholder:text-black bg-white w-full border border-blue-400 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:border-green-600 focus:ring-green-600 focus:ring-1"
+                name="date" className="text-2xl text-center placeholder:text-gray-600 focus:text-gray-400 bg-white w-full border border-blue-400 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:border-green-600 focus:ring-green-600 focus:ring-1"
             />
         </form>
     );

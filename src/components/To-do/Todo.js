@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import Loading from '../Loading/Loading';
 import CompleteTask from './CompleteTask';
 import TodoDetails from './TodoDetails';
 
@@ -40,8 +39,9 @@ const Todo = () => {
             })
     }
 
+
     if (tasks.length <= 0) {
-        return <Loading></Loading>;
+        return <h2 className='text-4xl mt-10 text-gray-500 text-center'>You have no Task</h2>
     }
 
     return (
