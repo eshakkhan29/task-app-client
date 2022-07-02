@@ -2,18 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import CompleteTask from './CompleteTask';
 import TodoDetails from './TodoDetails';
 
 const Todo = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const [user] = useAuthState(auth);
     const [tasks, setTasks] = useState([]);
     const [refetch, setReFetch] = useState(false);
     const email = user?.email;
     useEffect(() => {
+        setIsLoading(true);
         fetch(`https://glacial-earth-77178.herokuapp.com/task?email=${email}`)
             .then(res => res.json())
-            .then(data => setTasks(data))
+            .then(data => {
+                setTasks(data);
+                setIsLoading(false);
+            })
     }, [refetch, email])
     const completeTask = tasks.filter(task => task.taskStatus === "true");
     const unCompleteTask = tasks.filter(task => task.taskStatus === "false");
@@ -39,10 +45,13 @@ const Todo = () => {
             })
     }
 
-
-    if (tasks.length <= 0) {
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+    if (tasks.length === 0) {
         return <h2 className='text-4xl mt-10 text-gray-500 text-center'>You have no Task</h2>
     }
+
 
     return (
         <section className='py-10'>
